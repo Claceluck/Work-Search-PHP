@@ -1,0 +1,19 @@
+{
+    "name": "philip-gusev/work-search",
+    "description": "Diplom",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Philip Gusev",
+            "email": "Heroesfill@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Work\\Search\\": "src/"
+        }
+    }
+}
