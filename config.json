@@ -1,0 +1,15 @@
+{
+  "urls": {
+    "main": {
+      "path": "/",
+      "controller": "Philip\\Work\\Controllers\\IndexController::main",
+      "method": "GET"
+    }
+    },
+  "db": {"server": "127.0.0.1",
+    "dbname": "ws_diplom",
+    "user": "Philip",
+    "pass": "Philip",
+    "charset": "utf8"
+  }
+}
