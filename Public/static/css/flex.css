@@ -1,0 +1,42 @@
+/* Флексы */
+.flex_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.flex_column {
+    display: flex;
+    flex-direction: column;
+    
+}
+.no_wrap {
+    flex-wrap: nowrap;
+}
+.flex_row_blog {
+    display: flex;
+    flex-direction: row;
+}
+.flex_1 {
+    flex: 100%
+}
+.flex_2 {
+    flex: 50%;
+}
+.flex_3 {
+    flex: 33.3333333%;
+}
+.flex_4 {
+    flex: 25%;
+}
+.flex_5 {
+    flex: 20%;
+}
+.flex_6 {
+    flex: 16.6%;
+}
+.flex_7 {
+    flex: 14.2%;
+}
+.flex_8 {
+    flex: 12.5%;
+}

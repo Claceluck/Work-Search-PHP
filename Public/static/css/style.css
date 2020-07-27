@@ -1,4 +1,4 @@
-@import "/css/grid.css"; @import "/css/button.css"; @import "/css/flex.css"; @import "/css/form.css";
+@import "./grid.css"; @import "./flex.css"; @import "./form.css";
 
 /* Шрифты и отступы */
 
@@ -9,9 +9,7 @@
     text-decoration: none;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    /* color: #1E3A52; */
 }
-
 
 
 /* Общие стили */
@@ -19,7 +17,6 @@
 img {
     width: 100%;
     height: auto;
-    
 }
 
 .button_block {
@@ -34,9 +31,6 @@ margin-top: 40em;
     text-align: center;
 }
 
-.news_block{
-    
-}
 .conteiner h3,p {
     margin: 1em auto;
 }
@@ -104,7 +98,12 @@ body {
     margin: 0;
     background: #f2f2f2;
     height: 100%;
-  }
+    background-image: url(../img/fon.jpg);
+    /* ​​​​​​​​​​​​​background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
 header {
     text-align: center;
 }
@@ -260,14 +259,6 @@ header:hover {
 /* Изображения */
 
 /* Фон */
-
-body {
-    background-image: url(/img/fon.jpg) ;
-    /* ​​​​​​​​​​​​​background-attachment: fixed; */
-    background-repeat: no-repeat;
-    background-position: top center;
-    
-}
 
 img {
     /* Прозрачность */

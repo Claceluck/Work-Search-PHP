@@ -4,11 +4,9 @@
             <h4 class="logo_2"> Эта страница поможет вам найти работу или стажировку в разных странах мира!</h4>
         </div>
         <!-- Кнопка перехода на анкету -->
-
         <div class="conteiner button_block">
             <a class="start_button" href="anketa.html">Начать поиск</a>
         </div>
-
         <!-- Блок статитстики -->
         <h3 class="conteiner">Статистика</h3>
         <div class="conteiner stat_block stat_block_xm stat_block_xs">
@@ -42,7 +40,7 @@
         <h3 class="story_header">Истории людей</h3>
         <div class="conteiner story_block story_block_xm story_block_xs">
             <div class="story_block_1 story_block_1_xs">
-                <img class="story_img" src="/img/ny.jpeg" alt="#">
+                <img class="story_img" src="/static/img/ny.jpeg" alt="#">
                 <div>
                 <h3>Личный опыт: как найти работу в США</h3>
                 <h5>Автор: <a class="avtor" href="#">Екатерина Гаврилова</a> | 04.12.2019</h5>
@@ -51,16 +49,15 @@
                 </div>
             </div>
             <div class="story_block_1 story_block_1_xs">
-                <img class="story_img" src="/img/ispan.jpg" alt="#">
+                <img class="story_img" src="/static/img/ispan.jpg" alt="#">
                 <div>
                 <h3>Личный опыт: Собираю апельсины в Испании</h3>
                 <h5>Автор: <a class="avtor" href="#">Егор Иванов</a> | 04.12.2019</h5>
                 <p>Поспевают цитрусовые в Испании круглый год: только собрали первый урожай, а за ним уже на подходе следующий. Так как работать предстоит в поле, то рассчитывать на комфорт не приходится. Тем, кто не знает, как происходит сбор апельсинов в Испании, понять весь процесс поможет следующая информация..</p>
-                 <a class="read_later" href="#"> <span>Читать дальше...</span></a>
+                <a class="read_later" href="#"> <span>Читать дальше...</span></a>
                 </div>
             </div>
         </div>
     </main>
-    
-     <!-- файл js кокретной страницы -->
+    <!-- файл js кокретной страницы -->
     <!-- <script src="/static/js/"></script> -->

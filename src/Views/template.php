@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" href="/img/team.png" type="images/png">
+    <link rel="icon" href="/static/img/team.png" type="images/png">
     <title><? echo $title; ?></title>
     <!-- Объщие js библиотеки подключаем в тэге head -->
     <link rel="stylesheet" href="/static/css/style.css">
-    <!-- Объщие css библиотеки подключаем в тэге head --> -->
+    <!-- <link rel="stylesheet" href="/static/css/grid.css">
+    <link rel="stylesheet" href="/static/css/flex.css">
+    <link rel="stylesheet" href="/static/css/form.css"> -->
+    <!-- Объщие css библиотеки подключаем в тэге head -->
 </head>
 <body>
     <header>
@@ -26,7 +28,7 @@ head>
             <li><a href="#auth">Вход</a></li>
           </ul>
         </nav>
-      </header>
+    </header>
 
 
 <? include_once $content; ?>
