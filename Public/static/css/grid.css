@@ -1,5 +1,4 @@
 /*  Грид  сетка */
-
 body {
     display: grid;
     grid-template-areas: 
@@ -13,46 +12,55 @@ body {
 header {
     grid-area: header;
 }
+
 #vertical_nav {
     grid-area: vertical_nav;
 }
+
 #info_block {
     grid-area: info_block;
 }
+
 main {
     grid-area: main;
     margin-bottom: 1em;
 }
+
 footer {
     grid-area: footer;
 }
+
 .footer {
         grid-row-start: 3;
         grid-row-end: 4;
 }
-/* Размещение элементов в нутри сетки */
 
+/* Размещение элементов в нутри сетки */
 .stat_block {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
     gap: 1em;
 }
+
 .story_block {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 1em;
 }
+
 .story_block_1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
     align-items: center;
 } 
+
 .news_block {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     gap: 1em;
 }
+
 .blog_block {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 

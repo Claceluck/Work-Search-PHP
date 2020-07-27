@@ -22,7 +22,7 @@
             <li><a href="" class="submenu-link">О нас</a>
               <ul class="submenu">
                 <li><a href="/blog">Блог</a></li>
-                <li><a href="">Гид</a></li>
+                <li><a href="#">Гид</a></li>
               </ul>
             </li>
             <li><a href="#auth">Вход</a></li>

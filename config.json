@@ -4,6 +4,21 @@
       "path": "/",
       "controller": "Philip\\Work\\Controllers\\IndexController::main",
       "method": "GET"
+    },
+    "news": {
+      "path": "/news",
+      "controller": "Philip\\Work\\Controllers\\NewsController::news",
+      "method": "GET"
+    },
+    "questionnaire": {
+      "path": "/search-work",
+      "controller": "Philip\\Work\\Controllers\\SearchController::search",
+      "method": "GET"
+    },
+    "blog": {
+      "path": "/blog",
+      "controller": "Philip\\Work\\Controllers\\BlogController::blog",
+      "method": "GET"
     }
     },
   "db": {"server": "127.0.0.1",

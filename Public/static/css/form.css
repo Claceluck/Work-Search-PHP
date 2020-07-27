@@ -27,6 +27,7 @@ textarea {
    
     resize: none;
 }
+
 select {
     width: 100%;
     padding: 16px 20px;
@@ -69,4 +70,3 @@ label {
 .required:invalid {
     background-color: #fdd;
 }
-
