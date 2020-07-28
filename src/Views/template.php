@@ -73,6 +73,27 @@
     </section>
     </footer>
     <!-- общие js файлы -->
-    <!-- <script src="/static/js/"></script> -->
+    <!-- <script src="/static/js/auth.js"></script> -->
 </body>
+<!-- Модальное окно входа -->
+<section class="modal" id="auth">
+        <form class="flex-column" name="auth" action="/login" method="post">
+            <h3>Войти на сайт</h3>
+            <div class="form-row">
+                <input type="text" id="email" required autocomplete="off">
+                <label for="email">Email</label>
+            </div>
+            <div class="form-row">
+                <input type="password" id="password" required autocomplete="off">
+                <label for="password">Пароль</label>
+            </div>
+            <div>
+                <label> Запомнить меня:
+            <input type="checkbox" checked="checked" name="remember">
+            </label>
+            </div>
+            <p><input type="submit" value="Войти"></p>
+        </form>
+        <a class="close-modal" href="#0">X</a>
+    </section>
 </html>

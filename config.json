@@ -10,14 +10,29 @@
       "controller": "Philip\\Work\\Controllers\\NewsController::news",
       "method": "GET"
     },
-    "questionnaire": {
-      "path": "/search-work",
-      "controller": "Philip\\Work\\Controllers\\SearchController::search",
-      "method": "GET"
-    },
     "blog": {
       "path": "/blog",
       "controller": "Philip\\Work\\Controllers\\BlogController::blog",
+      "method": "GET"
+    },
+    "showRegForm": {
+      "path": "/registration",
+      "controller": "Philip\\Work\\Controllers\\AccountController::showRegForm",
+      "method": "GET"
+    },
+    "reg user": {
+      "path": "/registration",
+      "controller": "Philip\\Work\\Controllers\\AccountController::regUser",
+      "method": "POST"
+    },
+    "login user": {
+      "path": "/login",
+      "controller": "Philip\\Work\\Controllers\\AccountController::login",
+      "method": "POST"
+    },
+    "logout": {
+      "path": "/logout",
+      "controller": "Philip\\Work\\Controllers\\AccountController::logout",
       "method": "GET"
     }
     },

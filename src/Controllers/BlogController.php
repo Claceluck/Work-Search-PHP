@@ -6,6 +6,7 @@ use Philip\Work\Base\Controller;
 
 class BlogController extends Controller
 {
+    // метод отвечающий за отображение страницы /blog
     public function blog(){
         $content = 'blog.php';
         $data = ['title' => 'Блог'];

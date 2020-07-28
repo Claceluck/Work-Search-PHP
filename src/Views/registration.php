@@ -3,22 +3,22 @@
     <div class="info_buton conteiner">
         <h3 class="conteiner"> Заполните анкету </h3>
     </div>
-	<form id="" name="" action="#" method="POST">
+	<form id="" name="" action="/registration" method="POST">
 		<!-- Регистрация -->
 		<fieldset>
 			<h3>Для начала Зарегистрируемся:</h3>
 			<div class="anketa">
 				<label for="email">Email</label>
-				<input class="required" minlength="6" type="email" id="email" required autocomplete="off" placeholder="Email..">
+				<input class="required" minlength="6" type="email" id="email" required autocomplete="off" placeholder="Email...">
 			</div>
 			<div class="anketa">  
-				<label for="psw">Пароль</label>
-				<input class="required" minlength="6" type="password" id="psw" min="6" required autocomplete="off" placeholder="Пароль..">
+				<label for="pwd">Пароль</label>
+				<input class="required" minlength="6" type="password" id="pwd" min="6" required autocomplete="off" placeholder="Пароль...">
 			</div>
-			<div class="anketa">
-				<label for="psw-repeat">Повторите пароль</label>
-				<input class="required" minlength="6" type="password" id="psw-repeat" min="6" required autocomplete="off" placeholder="Повторите пароль..">
-			</div>
+			<!-- <div class="anketa">
+				<label for="pwd-repeat">Повторите пароль</label>
+				<input class="required" minlength="6" type="password" id="pwd-repeat" min="6" required autocomplete="off" placeholder="Повторите пароль..">
+			</div> -->
 		</fieldset>
 		<!-- Контактная информация -->
 		<fieldset>
@@ -170,5 +170,6 @@
 		<div>
 			<input type="submit" value="Отправить">
 		</div>
+		<p><? echo $reg_result; ?></p>
 	</form>
 </main>

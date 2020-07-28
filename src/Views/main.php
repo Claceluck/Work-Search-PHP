@@ -5,7 +5,7 @@
 	</div>
 	<!-- Кнопка перехода на анкету -->
 	<div class="conteiner button_block">
-		<a class="start_button" href="/search-work">Начать поиск</a>
+		<a class="start_button" href="/registration">Начать поиск</a>
 	</div>
 	<!-- Блок статитстики -->
 	<h3 class="conteiner">Статистика</h3>
