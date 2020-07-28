@@ -22,6 +22,6 @@ function responseHandler(answer){
     if (answer === AUTH_ERROR){
         alert(answer);
     } else if (answer === AUTH_OK){
-        window.location.replace('/account');
+        window.location.replace('/');
     }
 }

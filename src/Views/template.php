@@ -14,19 +14,23 @@
 </head>
 <body>
     <header>
-        <a href="main.html" class="logo">Work & Travels</a>
+        <a href="/" class="logo">Work & Travels</a>
         <nav>
           <ul class="topmenu">
-            <li><a href="/">Главная</a></li>
-            <li><a href="/news">Новости</a></li>
-            <li><a href="" class="submenu-link">О нас</a>
-              <ul class="submenu">
-                <li><a href="/blog">Блог</a></li>
-                <li><a href="#">Гид</a></li>
-              </ul>
-            </li>
-            <li><a href="#auth">Вход</a></li>
-          </ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/news">Новости</a></li>
+                <li><a href="" class="submenu-link">О нас</a>
+                <ul class="submenu">
+                    <li><a href="/blog">Блог</a></li>
+                    <li><a href="#">Гид</a></li>
+                </ul>
+                </li>
+                <? if (isset($_SESSION['email'])): ?>
+                    <li><a href="/logout">Выйти</a></li>
+                <? else: ?>
+                    <li><a href="#auth">Вход</a></li>
+                <? endif; ?>
+            </ul>
         </nav>
     </header>
 
@@ -72,20 +76,17 @@
             </nav>
     </section>
     </footer>
-    <!-- общие js файлы -->
-    <!-- <script src="/static/js/auth.js"></script> -->
-</body>
-<!-- Модальное окно входа -->
-<section class="modal" id="auth">
-        <form class="flex-column" name="auth" action="/login" method="post">
+    <!-- Модальное окно входа -->
+    <section class="modal" id="auth">
+        <form name="auth" class="flex-column">
             <h3>Войти на сайт</h3>
             <div class="form-row">
-                <input type="text" id="email" required autocomplete="off">
+            <input name="email" type="email" id="email" required autocomplete="off">
                 <label for="email">Email</label>
             </div>
             <div class="form-row">
-                <input type="password" id="password" required autocomplete="off">
-                <label for="password">Пароль</label>
+                <input name="password" type="password" id="pwd" required autocomplete="off">
+                <label for="pwd">Пароль</label>
             </div>
             <div>
                 <label> Запомнить меня:
@@ -96,4 +97,7 @@
         </form>
         <a class="close-modal" href="#0">X</a>
     </section>
+    <!-- общие js файлы -->
+    <script src="/static/js/auth.js"></script>
+</body>
 </html>

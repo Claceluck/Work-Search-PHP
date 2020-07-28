@@ -11,7 +11,8 @@ class AccountService // класс уровня Model
     const REGISTRATION_ERROR = 'Ошибка регистрации';
 	const USER_EXISTS = 'Пользователь с таким логином уже существует';
 	
-    const AUTH_ERROR = 'Ошибка авторизации';
+    const AUTH_ERROR_PWD = 'Ошибка при в воде пароля';
+    const AUTH_ERROR_NAME = 'Ошибка в имени пользователя';
     const AUTH_OK = 'Авторизация прошла успешно';
 
     private $dbConnection;
@@ -83,7 +84,6 @@ class AccountService // класс уровня Model
                 'id_user' => $this->dbConnection->getConnection()->lastInsertId()
             ];
             $this->dbConnection->executeSql($user_info_sql, $user_info_params);
-
             // подтверждение транзакции
             // метод commit объекта PDO подтверждает транзакцию (данные записываются в таблицы)
             $this->dbConnection->getConnection()->commit();
@@ -101,14 +101,10 @@ class AccountService // класс уровня Model
         $email = $auth_data['email'];
         $pwd = $auth_data['password'];
         $user = $this->getUser($email);
-        if (!$user) return self::AUTH_ERROR;
-        // можно конкретизировать ответ - ошибка ввода email
-        // password_verify(пароль, зашифрованный_пароль)
-        // возвращает true, если пароли совпадают и
-        // false, если нет
+        if (!$user) return self::AUTH_ERROR_NAME;
+
         if (!password_verify($pwd, $user['hash'])) {
-            // можно конкретизировать ответ - ошибка ввода пароля
-            return self::AUTH_ERROR;
+            return self::AUTH_ERROR_PWD;
         }
         return self::AUTH_OK;
     }
