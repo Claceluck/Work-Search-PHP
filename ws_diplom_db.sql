@@ -1,5 +1,7 @@
 USE ws_diplom;
 SHOW TABLES;
+SELECT * FROM `user`;
+SELECT * FROM `user_info`;
 
 CREATE TABLE IF NOT EXISTS `ws_diplom`.`user` (
   `id_user` INT NOT NULL AUTO_INCREMENT,
@@ -38,3 +40,17 @@ CREATE TABLE IF NOT EXISTS `ws_diplom`.`user_info` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
+CREATE TABLE IF NOT EXISTS `shelter`.`news` (
+  `id_news` INT(11) NOT NULL AUTO_INCREMENT,
+  `news_header` VARCHAR(150) NOT NULL,
+  `article` LONGTEXT NOT NULL,
+  `id_user` INT(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`id_news`),
+  INDEX `fk_news_user1_idx` (`id_user` ASC),
+  CONSTRAINT `fk_news_user1`
+    FOREIGN KEY (`id_user`)
+    REFERENCES `ws_diplom`.`user` (`id_user`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;

@@ -5,7 +5,7 @@ namespace Philip\Work\Services;
 use Philip\Work\Base\DBConnection;
 use Exception;
 
-class AccountService // класс уровня Model
+class AccountService
 {
     const REGISTRATION_SUCCESS = 'Регистрация прошла успешно';
     const REGISTRATION_ERROR = 'Ошибка регистрации';

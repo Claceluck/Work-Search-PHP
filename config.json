@@ -10,6 +10,16 @@
       "controller": "Philip\\Work\\Controllers\\NewsController::news",
       "method": "GET"
     },
+    "showNewNews": {
+      "path": "/new-news",
+      "controller": "Philip\\Work\\Controllers\\NewsController::showNewNews",
+      "method": "GET"
+    },
+    "add news": {
+      "path": "/new-news",
+      "controller": "Philip\\Work\\Controllers\\NewsController::addNews",
+      "method": "POST"
+    },
     "blog": {
       "path": "/blog",
       "controller": "Philip\\Work\\Controllers\\BlogController::blog",

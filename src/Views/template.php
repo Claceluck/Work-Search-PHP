@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/static/img/team.png" type="images/png">
     <title><? echo $title; ?></title>
-    <!-- Объщие js библиотеки подключаем в тэге head -->
     <link rel="stylesheet" href="/static/css/style.css">
-    <!-- <link rel="stylesheet" href="/static/css/grid.css">
-    <link rel="stylesheet" href="/static/css/flex.css">
-    <link rel="stylesheet" href="/static/css/form.css"> -->
-    <!-- Объщие css библиотеки подключаем в тэге head -->
 </head>
 <body>
     <header>

@@ -70,3 +70,14 @@ label {
 .required:invalid {
     background-color: #fdd;
 }
+
+.button-new-news {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    margin-bottom: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
