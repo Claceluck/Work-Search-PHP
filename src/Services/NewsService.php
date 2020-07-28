@@ -22,5 +22,4 @@ class NewsService
 		(:news_header, :article);';
 		return $this->dbConnection->executeSql($sql, $news_data) ? self::INSERT_SUCCESS : self::INSERT_ERROR;
 	}
-
 }

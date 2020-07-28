@@ -2,6 +2,7 @@ USE ws_diplom;
 SHOW TABLES;
 SELECT * FROM `user`;
 SELECT * FROM `user_info`;
+SELECT * FROM `news`;
 
 CREATE TABLE IF NOT EXISTS `ws_diplom`.`user` (
   `id_user` INT NOT NULL AUTO_INCREMENT,
@@ -40,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `ws_diplom`.`user_info` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `shelter`.`news` (
+CREATE TABLE IF NOT EXISTS `ws_diplom`.`news` (
   `id_news` INT(11) NOT NULL AUTO_INCREMENT,
   `news_header` VARCHAR(150) NOT NULL,
   `article` LONGTEXT NOT NULL,
