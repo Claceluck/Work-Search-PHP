@@ -7,9 +7,8 @@ auth_form.addEventListener('submit', async (event)=>{
             await fetch('/login', {
             method: 'POST',
             body: new FormData(auth_form)
-        //        {значение_атрибута_name : значение_атрибута_value}
         });
-        const answer = await response.text(); // .json();
+        const answer = await response.text();
         console.log("ответ сервера " + answer);
         responseHandler(answer);
     } catch (error) {
