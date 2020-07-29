@@ -29,7 +29,7 @@ class NewsController extends Controller
 
     // добавляет новость в бд
     public function addNews(Request $request){
-        //var_dump($request->post());
+        // var_dump($request->post());
         $newsResult = $this->newsService->addNews($request->post());
         $content = 'new-news.php';
         $data = [

@@ -5,12 +5,12 @@
   	<form action="/addNews" >
 	  	<fieldset> 
 			<div class="anketa">
-				<label for="name">Название</label>
+				<label for="news_header">Название</label>
 				<input type="text" name="news_header" id="article" placeholder="Название">
 			</div>
 		</fieldset> 
       	<fieldset> 
-		  <label for="name">Содержание</label>
+		  <label for="article">Содержание</label>
 			<textarea name="article" id="" cols="30" rows="10" placeholder="Текст"></textarea> 
 		</fieldset> 
 	</form>
