@@ -2,7 +2,7 @@
 	<div class="info_buton conteiner">
         <h3 class="conteiner">Напишите новость</h3>
     </div>
-  	<form action="/addNews" >
+  	<form action="/addNewNews" >
 	  	<fieldset> 
 			<div class="anketa">
 				<label for="news_header">Название</label>

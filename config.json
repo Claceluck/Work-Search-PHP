@@ -1,56 +1,56 @@
 {
-  "urls": {
+  	"urls": {
     "main": {
-      "path": "/",
-      "controller": "Philip\\Work\\Controllers\\IndexController::main",
-      "method": "GET"
+    "path": "/",
+	"controller": "Philip\\Work\\Controllers\\IndexController::main",
+	"method": "GET"
     },
     "news": {
-      "path": "/news",
-      "controller": "Philip\\Work\\Controllers\\NewsController::news",
-      "method": "GET"
+	"path": "/news",
+	"controller": "Philip\\Work\\Controllers\\NewsController::news",
+	"method": "GET"
     },
     "showNewNews": {
-      "path": "/new-news",
-      "controller": "Philip\\Work\\Controllers\\NewsController::showNewNews",
-      "method": "GET"
+	"path": "/new-news",
+	"controller": "Philip\\Work\\Controllers\\NewsController::showNewNews",
+	"method": "GET"
     },
     "add news": {
-      "path": "/new-news",
-      "controller": "Philip\\Work\\Controllers\\NewsController::addNews",
-      "method": "POST"
+	"path": "/new-news",
+	"controller": "Philip\\Work\\Controllers\\NewsController::addNewNews",
+	"method": "POST"
     },
     "blog": {
-      "path": "/blog",
-      "controller": "Philip\\Work\\Controllers\\BlogController::blog",
-      "method": "GET"
+	"path": "/blog",
+	"controller": "Philip\\Work\\Controllers\\BlogController::blog",
+	"method": "GET"
     },
     "showRegForm": {
-      "path": "/registration",
-      "controller": "Philip\\Work\\Controllers\\AccountController::showRegForm",
-      "method": "GET"
+	"path": "/registration",
+	"controller": "Philip\\Work\\Controllers\\AccountController::showRegForm",
+	"method": "GET"
     },
     "reg user": {
-      "path": "/registration",
-      "controller": "Philip\\Work\\Controllers\\AccountController::regUser",
-      "method": "POST"
+	"path": "/registration",
+	"controller": "Philip\\Work\\Controllers\\AccountController::regUser",
+	"method": "POST"
     },
     "login user": {
-      "path": "/login",
-      "controller": "Philip\\Work\\Controllers\\AccountController::login",
-      "method": "POST"
+	"path": "/login",
+	"controller": "Philip\\Work\\Controllers\\AccountController::login",
+	"method": "POST"
     },
     "logout": {
-      "path": "/logout",
-      "controller": "Philip\\Work\\Controllers\\AccountController::logout",
-      "method": "GET"
+	"path": "/logout",
+	"controller": "Philip\\Work\\Controllers\\AccountController::logout",
+	"method": "GET"
     }
-    },
-  "db": {
-    "server": "127.0.0.1",
-    "dbname": "ws_diplom",
-    "user": "Philip",
-    "pass": "Philip",
-    "charset": "utf8"
-  }
+	},
+	"db": {
+		"server": "127.0.0.1",
+		"dbname": "ws_diplom",
+		"user": "Philip",
+		"pass": "Philip",
+		"charset": "utf8"
+	}
 }
