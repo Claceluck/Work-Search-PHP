@@ -17,7 +17,7 @@
     },
     "add news": {
 	"path": "/new-news",
-	"controller": "Philip\\Work\\Controllers\\NewsController::addNewNews",
+	"controller": "Philip\\Work\\Controllers\\NewsController::addNews",
 	"method": "POST"
     },
     "blog": {

@@ -28,13 +28,23 @@ class NewsController extends Controller
     }
 
     // добавляет новость в бд
-    public function addNewNews(Request $request){
-        // var_dump($request->post());
-        $newsResult = $this->newsService->addNews($request->post());
-        $content = 'new-news.php';
-        $data = [
-            'news_result' => $newsResult
-        ];
-        return $this->generateResponse($content,$data);
+    public function addNews(Request $request){
+        $news_data = $request->post();
+        $news_data['news_header'] =  $news_data['news_header'];
+        $news_data['article'] =  $news_data['article'];
+        $answer = $this->newsService->addNews($news_data) ?
+            'Новость добавлена' : 'Ошибка добавления';
+        return $this->ajaxResponse($answer);
     }
+    
+    // public function addNewNews(Request $request){
+    //     // var_dump($request->post());
+    //     $newsResult = $this->newsService->addNews($request->post());
+    //     $content = 'new-news.php';
+    //     $data = [
+    //         'news_result' => $newsResult
+    //     ];
+    //     return $this->generateResponse($content,$data);
+
+    // }
 }
