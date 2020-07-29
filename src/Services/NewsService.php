@@ -26,7 +26,7 @@ class NewsService
 							self::INSERT_SUCCESS : self::INSERT_ERROR;
 	}
 
-}
+
 							
 	// public function addNews(array $news_data){
 
@@ -58,4 +58,5 @@ class NewsService
 	// 		return self::INSERT_ERROR;
 	// 	}
 	// }
+}
 		

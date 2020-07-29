@@ -13,9 +13,9 @@
 			<label for="article">Содержание</label>
 			<textarea name="article" id="" cols="30" rows="10" placeholder="Текст"></textarea> 
 		</fieldset> 
+		<div> 
+			<input type="submit" value="Добавить новость"> 
+		</div>
 	</form>
-	<div> 
-		<input type="submit" value="Добавить новость"> 
-	</div>
 	<!-- <? echo $newsResult;?> -->
 </main>

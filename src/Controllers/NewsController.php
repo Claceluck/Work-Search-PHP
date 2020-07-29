@@ -37,7 +37,7 @@ class NewsController extends Controller
         return $this->ajaxResponse($answer);
     }
     
-    // public function addNewNews(Request $request){
+    // public function addNews(Request $request){
     //     // var_dump($request->post());
     //     $newsResult = $this->newsService->addNews($request->post());
     //     $content = 'new-news.php';
