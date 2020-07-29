@@ -21,11 +21,9 @@ class NewsService
 		$news_header = $news_data['news_header'];
 		$article = $news_data['article'];
 
-		$news_sql = 'INSERT INTO news 
-		(news_header, article )
-		VALUES
-		(:news_header, :article);';
-	
+		$news_sql ='INSERT INTO news(news_header, article ) 
+					VALUES
+					(:news_header, :article);';
 		try {
 			$this->dbConnection->getConnection()->beginTransaction();
 
