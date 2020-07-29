@@ -17,5 +17,4 @@
 			<input type="submit" value="Добавить новость"> 
 		</div>
 	</form>
-	<!-- <? echo $newsResult;?> -->
 </main>
