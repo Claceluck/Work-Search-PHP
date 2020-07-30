@@ -16,10 +16,14 @@ class NewsController extends Controller
 
     // метод отвечающий за отображение страницы /news
     public function news(){
+        $news = $this->newsService->getNews();
         $content = 'news.php';
-        $data = ['title' => 'Новости'];
+        $data = ['title' => 'Новости',
+                'news' => $news                  
+    ];
         return $this->generateResponse($content, $data);
     }
+
     // метод отвечающий ща отображаения форм создания новости
     public function showNewNews(){
         $content = 'new-news.php';
@@ -33,7 +37,7 @@ class NewsController extends Controller
         $news_data['news_header'] =  $news_data['news_header'];
         $news_data['article'] =  $news_data['article'];
         $answer = $this->newsService->addNews($news_data) ?
-            'Новость добавлена' : 'Ошибка добавления';
+        header('Location: /news') : 'Ошибка добавления';
         return $this->ajaxResponse($answer);
     }
     

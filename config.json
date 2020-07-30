@@ -16,7 +16,7 @@
 	"method": "GET"
     },
     "add news": {
-	"path": "/new-news",
+	"path": "/addNews",
 	"controller": "Philip\\Work\\Controllers\\NewsController::addNews",
 	"method": "POST"
     },

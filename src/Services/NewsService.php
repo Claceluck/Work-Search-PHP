@@ -16,6 +16,11 @@ class NewsService
         $this->dbConnection = DBConnection::getInstance();
 	}
 
+	public function getNews(){
+		$sql = 'SELECT * FROM news';
+        return $this->dbConnection->queryAll($sql);
+    }
+
 	public function addNews(array $news_data) {
 
         $news_sql ='INSERT INTO news(news_header, article ) 
