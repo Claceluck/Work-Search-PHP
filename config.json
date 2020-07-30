@@ -23,7 +23,7 @@
 	"delete news": {
 		"path": "/news/delete/{id}",
 		"controller": "Philip\\Work\\Controllers\\NewsController::deleteNews",
-		"method": "POST"
+		"method": "GET"
 	},
     "add news": {
 		"path": "/addNews",

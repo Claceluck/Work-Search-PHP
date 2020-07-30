@@ -43,7 +43,7 @@ class NewsService
     public function deleteNews($id){
         $sql = 'DELETE FROM news WHERE id_news = :id;';
         $params = ['id' => $id];
-        return $this->dbConnection->execute($sql, $params, false);
+        return $this->dbConnection->executeSql($sql, $params, false);
     }
 }
 		

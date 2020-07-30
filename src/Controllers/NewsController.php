@@ -65,6 +65,6 @@ class NewsController extends Controller
             'delete_news' => $deleteNews
         ];
 
-        return $this->generateResponse($content,$data);
+        return header("Location: /news");
     }
 }
