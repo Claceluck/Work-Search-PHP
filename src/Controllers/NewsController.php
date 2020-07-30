@@ -21,6 +21,19 @@ class NewsController extends Controller
         $data = ['title' => 'Новости',
                 'news' => $news                  
     ];
+    
+        return $this->generateResponse($content, $data);
+    }
+
+    public function showNewsById(Request $request) {
+        $id = $request->params()['id'];
+        $news = $this->newsService->getNewsById($id);
+        $content ='news-by-id.php';
+        $data = [
+            'page_title' => $news['news_header'],
+            'news' => $news
+        ];
+
         return $this->generateResponse($content, $data);
     }
 
@@ -28,6 +41,7 @@ class NewsController extends Controller
     public function showNewNews(){
         $content = 'new-news.php';
         $data = ['title' => 'Добавить новость'];
+
         return $this->generateResponse($content, $data);
     }
 
@@ -38,17 +52,19 @@ class NewsController extends Controller
         $news_data['article'] =  $news_data['article'];
         $answer = $this->newsService->addNews($news_data) ?
         header('Location: /news') : 'Ошибка добавления';
+
         return $this->ajaxResponse($answer);
     }
     
-    // public function addNews(Request $request){
-    //     // var_dump($request->post());
-    //     $newsResult = $this->newsService->addNews($request->post());
-    //     $content = 'new-news.php';
-    //     $data = [
-    //         'news_result' => $newsResult
-    //     ];
-    //     return $this->generateResponse($content,$data);
+    // метод удаления новости
+    public function deleteNews(Request $request){
+        $id = $request->params()['id'];
+        $deleteNews = $this->newsService->deleteNews($id);
+        $content = 'news.php';
+        $data = [
+            'delete_news' => $deleteNews
+        ];
 
-    // }
+        return $this->generateResponse($content,$data);
+    }
 }

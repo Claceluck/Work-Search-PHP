@@ -14,7 +14,11 @@
                 <div>
                     <h3><? echo $item['news_header']?></h3>
                     <p><? echo $item['article'] ?></p>
-                    <a class="read_later" href="#"> <span>Читать дальше...</span></a>
+
+                    <a class="read_later" href="/news/<?echo $item['id_news']?>">
+                    <span>Читать дальше...</span></a>
+                    
+                    <a type="delete" href="/news/delete/<?echo $item['id_news']?>">Удалить новость</a>
                 </div>
             </div>
 
