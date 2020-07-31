@@ -23,17 +23,13 @@ class AccountService
 
     public function addUser(array $reg_data){
 
-        // TODO:: Валидация!!!
-        //        [
-        //          'email'=> '',
-        //          'password' => '',
-        //          'name'=> '',
-        //          'phone'=>
-        //        ]
-
         // заносим данные в бд
         $email = $reg_data['email'];
-        if ($this->getUser($email)) return self::USER_EXISTS;
+
+        if ($this->getUser($email)) {
+        return self::USER_EXISTS;
+        };
+
         $pwd = $reg_data['password']; // qwerty123
         $pwd = password_hash($pwd, PASSWORD_DEFAULT);
 
@@ -54,8 +50,6 @@ class AccountService
             :user_laungue_talk, :user_education, :user_profession,
             :user_exp_prof_aboard, :user_additional_Info, :id_user)';
         try {
-            // начало транзакции
-            // метод beginTransaction объекта PDO открывает транзакцию
             $this->dbConnection->getConnection()->beginTransaction();
             $user_params = [
                 'user_email'=>$email,
@@ -84,32 +78,34 @@ class AccountService
                 'id_user' => $this->dbConnection->getConnection()->lastInsertId()
             ];
             $this->dbConnection->executeSql($user_info_sql, $user_info_params);
-            // подтверждение транзакции
-            // метод commit объекта PDO подтверждает транзакцию (данные записываются в таблицы)
             $this->dbConnection->getConnection()->commit();
+
             return self::REGISTRATION_SUCCESS;
-        } catch (Exception $exception){
-            // откат транзакции (к методу beginTransaction) данные не будут добавлены
-            // метод rollBack объекта PDO откатыват транзакцию к вызову метода beginTransaction
+
+        }   catch (Exception $exception){
             $this->dbConnection->getConnection()->rollBack();
+
             return self::REGISTRATION_ERROR;
         }
     }
 
-    // авторизация пользователя
+    // авторизация
     public function auth(array $auth_data){
         $email = $auth_data['email'];
         $pwd = $auth_data['password'];
         $user = $this->getUser($email);
-        if (!$user) return self::AUTH_ERROR_NAME;
-
+        if (!$user) {
+            return self::AUTH_ERROR_NAME;
+        };
         if (!password_verify($pwd, $user['hash'])) {
+
             return self::AUTH_ERROR_PWD;
-        }
+        };
+
         return self::AUTH_OK;
     }
 
-    // проверка на наличие пользователя по email
+    // проверка по email
     private function getUser($email){
         $sql = 'SELECT * FROM user WHERE email = :email';
         $user = $this->dbConnection->execute(
@@ -117,6 +113,7 @@ class AccountService
             ['email' => $email],
             false
         );
+        
         return $user;
     }
 }

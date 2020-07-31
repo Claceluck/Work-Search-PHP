@@ -29,6 +29,16 @@
 		"path": "/addNews",
 		"controller": "Philip\\Work\\Controllers\\NewsController::addNews",
 		"method": "POST"
+	},
+	"redaction news": {
+		"path": "/redactionNews",
+		"controller": "Philip\\Work\\Controllers\\NewsController::redactionNews",
+		"method": "POST"
+	},
+	"show redaction": {
+		"path": "/news/redaction/{id}",
+		"controller": "Philip\\Work\\Controllers\\NewsController::showRedactionNewsById",
+		"method": "GET"
     },
     "blog": {
 		"path": "/blog",

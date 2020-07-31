@@ -14,14 +14,15 @@ class AccountController extends Controller
         $this->accountService = new AccountService();
     }
 
-    // /registration GET
+    // отображение регестрации
     public function showRegForm(){
         $content = 'registration.php';
         $data = ['title' => 'Анкета и регистрация'];
+        
         return $this->generateResponse($content, $data);
     }
 
-    // регитрация пользователя /registration POST
+    // регитрация
     public function regUser(Request $request){
         //var_dump($request->post());
         $result = $this->accountService->addUser($request->post());
@@ -30,10 +31,11 @@ class AccountController extends Controller
             'page_title'=>'Регистрация',
             'reg_result' => $result
         ];
+
         return $this->generateResponse($content,$data);
     }
 
-    // метод, отвечающий за авторизацию /login POST
+    // авторизацию
     public function login(Request $request){
         $auth_data = $request->post();
         // валидация
@@ -41,10 +43,11 @@ class AccountController extends Controller
         if ($result == AccountService::AUTH_OK) {
             $_SESSION['email'] = $auth_data['email'];
         }
+
         return $this->ajaxResponse($result);
     }
 
-    // метод отвечающий за выход /logout
+    // выход
     public function logout(){
         $_SESSION = [];
         header('Location: /');

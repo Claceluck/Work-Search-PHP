@@ -19,14 +19,16 @@ class NewsService
 	}
 
 	public function getNews(){
-		$sql = 'SELECT * FROM news';
+        $sql = 'SELECT * FROM news';
+        
         return $this->dbConnection->queryAll($sql);
     }
 
 	public function getNewsById($id){
-        $sql = $sql = 'SELECT * FROM news
+        $sql = 'SELECT * FROM news
         where id_news = :id;';
         $params = ['id' => $id];
+
         return $this->dbConnection->execute($sql, $params, false);
 	}
 	
@@ -38,11 +40,29 @@ class NewsService
 
         return $this->dbConnection->executeSql($news_sql, $news_data) ?
 							self::INSERT_SUCCESS : self::INSERT_ERROR;
+    }
+    
+    public function getRedactionNewsById($id){
+        $sql = 'SELECT * FROM news
+        WHERE id_news = :id;';
+        $params = ['id' => $id];
+
+        return $this->dbConnection->execute($sql, $params, false);
 	}
+
+    public function redactionNews(array $news_data) {
+        $sql ='UPDATE  news 
+                SET news_header = :news_header, article = :article
+                WHERE id_news = :id_news;';
+        
+        return $this->dbConnection->executeSql($sql, $news_data) ?
+							self::INSERT_SUCCESS : self::INSERT_ERROR;
+    }
     
     public function deleteNews($id){
         $sql = 'DELETE FROM news WHERE id_news = :id;';
         $params = ['id' => $id];
+        
         return $this->dbConnection->executeSql($sql, $params, false);
     }
 }

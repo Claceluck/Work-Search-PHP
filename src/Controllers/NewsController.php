@@ -14,7 +14,7 @@ class NewsController extends Controller
         $this->newsService = new NewsService();
     }
 
-    // метод отвечающий за отображение страницы /news
+    // отображение страницы с блогом
     public function news(){
         $news = $this->newsService->getNews();
         $content = 'news.php';
@@ -25,6 +25,7 @@ class NewsController extends Controller
         return $this->generateResponse($content, $data);
     }
 
+     // отображение одной страницы блога
     public function showNewsById(Request $request) {
         $id = $request->params()['id'];
         $news = $this->newsService->getNewsById($id);
@@ -37,7 +38,7 @@ class NewsController extends Controller
         return $this->generateResponse($content, $data);
     }
 
-    // метод отвечающий ща отображаения форм создания новости
+    // отображаение формы добавления
     public function showNewNews(){
         $content = 'new-news.php';
         $data = ['title' => 'Добавить новость'];
@@ -45,7 +46,7 @@ class NewsController extends Controller
         return $this->generateResponse($content, $data);
     }
 
-    // добавляет новость в бд
+    // добавление истории
     public function addNews(Request $request){
         $news_data = $request->post();
         $news_data['news_header'] =  $news_data['news_header'];
@@ -55,15 +56,36 @@ class NewsController extends Controller
 
         return $this->ajaxResponse($answer);
     }
+
+    // отображение страницы редактирования
+    public function showRedactionNewsById(Request $request) {
+        $id = $request->params()['id'];
+        $news = $this->newsService->getRedactionNewsById($id);
+        $content ='redaction-news.php';
+        $data = [
+            'page_title' => $news['news_header'],
+            'news' => $news
+        ];
+
+        return $this->generateResponse($content, $data);
+    }
+
+    // редактирование
+    public function redactionNews(Request $request){
+        $news_data = $request->post();
+        $news_data['id_news'] =  $news_data['id_news'];
+        $news_data['news_header'] =  $news_data['news_header'];
+        $news_data['article'] =  $news_data['article'];
+        $answer = $this->newsService->redactionNews($news_data) ?
+        header('Location: /news') : 'Ошибка редактирования';
+
+        return $this->ajaxResponse($answer);
+    }
     
-    // метод удаления новости
+    // метод удаления 
     public function deleteNews(Request $request){
         $id = $request->params()['id'];
-        $deleteNews = $this->newsService->deleteNews($id);
-        $content = 'news.php';
-        $data = [
-            'delete_news' => $deleteNews
-        ];
+        $this->newsService->deleteNews($id);
 
         return header("Location: /news");
     }
