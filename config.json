@@ -69,11 +69,6 @@
 		"path": "/user-account/{email}",
 		"controller": "Philip\\Work\\Controllers\\AccountController::getAccountById",
 		"method": "GET"
-	},
-	"account user info": {
-		"path": "/user-account/{email}/{id_info}",
-		"controller": "Philip\\Work\\Controllers\\AccountController::getAccountInfoById",
-		"method": "GET"
 	}
 	},
 	"db": {

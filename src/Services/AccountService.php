@@ -119,17 +119,9 @@ class AccountService
 
     // личный кабинет
     public function getAccountById($email){
-        $sql = 'SELECT * FROM user
+        $sql = 'SELECT * FROM user, user_info
         WHERE email = :email;';
         $params = ['email' => $email];
-
-        return $this->dbConnection->execute($sql, $params, false);
-    }
-    
-    public function getAccountInfoById($id_info){
-        $sql = 'SELECT * FROM user_info
-        WHERE id_info = :id_info;';
-        $params = ['id_info' => $id_info];
 
         return $this->dbConnection->execute($sql, $params, false);
     }

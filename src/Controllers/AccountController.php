@@ -64,15 +64,4 @@ class AccountController extends Controller
 
         return $this->generateResponse($content, $data);
     }
-
-    public function getAccountInfoById(Request $request) {
-        $id_info = $request->params()['id_info'];
-        $userInfo = $this->accountService->getAccountInfoById($id_info);
-        $content ='personal-area-info.php';
-        $data = [
-            'userInfo' => $userInfo
-        ];
-
-        return $this->generateResponse($content, $data);
-    }
 }
