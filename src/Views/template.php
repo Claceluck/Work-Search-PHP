@@ -16,10 +16,10 @@
                 <li><a href="/">Главная</a></li>
                 <? else: ?>
                 <? endif; ?>
-                <li><a href="/news">Новости</a></li>
+                <li><a href="/news">Блог</a></li>
                 <li><a href="" class="submenu-link">О нас</a>
                 <ul class="submenu">
-                    <li><a href="/blog">Блог</a></li>
+                    <li><a href="/blog">Новости</a></li>
                     <li><a href="#">Гид</a></li>
                 </ul>
                 </li>

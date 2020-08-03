@@ -15,7 +15,7 @@
 			<textarea name="article" id="article"><? echo $news['article'] ?></textarea> 
 		</fieldset> 
 		<div> 
-			<input type="submit" value="Редактировать новость"> 
+			<input type="submit" value="Редактировать историю"> 
 		</div>
 	</form>
 </main>

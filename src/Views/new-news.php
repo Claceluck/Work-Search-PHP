@@ -1,6 +1,6 @@
 <main>
 	<div class="info_buton conteiner">
-        <h3 class="conteiner">Напишите новость</h3>
+        <h3 class="conteiner">Напишите свою историю</h3>
     </div>
   	<form action="/addNews" method="POST">
 	  	<fieldset> 
@@ -14,7 +14,7 @@
 			<textarea name="article" id="" cols="30" rows="10" placeholder="Текст"></textarea> 
 		</fieldset> 
 		<div> 
-			<input type="submit" value="Добавить новость"> 
+			<input type="submit" value="Добавить историю"> 
 		</div>
 	</form>
 </main>

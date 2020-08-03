@@ -1,7 +1,7 @@
 <main>
     <!-- Основной контент -->
     <div class="info_buton conteiner">
-        <h3 class="story_header">Новости</h3>
+        <h3 class="story_header">Истории людей</h3>
         <div class="conteiner story_block story_block_xm story_block_xs">
             <?php foreach ($news as $item):?>
             <div class="story_block_1 story_block_1_xs">
@@ -23,7 +23,7 @@
         </div>
     </div>
     <? if (isset($_SESSION['email'])): ?>
-        <li><a class="button-new-news" href="/new-news">Добавить новость</a></li>
+        <li><a class="button-new-news" href="/new-news">Добавить историю...</a></li>
     <? else: ?>
     <? endif; ?>
 </main>

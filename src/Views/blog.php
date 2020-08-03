@@ -1,7 +1,7 @@
 <main>
     <!-- Основной контент -->
     <div class="info_buton conteiner">
-        <h3 class="conteiner"> Блог </h3>
+        <h3 class="conteiner"> Новости </h3>
     </div>
     <div class="blog_block blog_block_xm blog_block_xs">
         <div>
