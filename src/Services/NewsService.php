@@ -26,7 +26,7 @@ class NewsService
 
 	public function getNewsById($id){
         $sql = 'SELECT * FROM news
-        where id_news = :id;';
+        WHERE id_news = :id;';
         $params = ['id' => $id];
 
         return $this->dbConnection->execute($sql, $params, false);

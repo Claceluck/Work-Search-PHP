@@ -12,7 +12,10 @@
         <a href="/" class="logo">Work & Travels</a>
         <nav>
           <ul class="topmenu">
+                <? if (!isset($_SESSION['email'])): ?>
                 <li><a href="/">Главная</a></li>
+                <? else: ?>
+                <? endif; ?>
                 <li><a href="/news">Новости</a></li>
                 <li><a href="" class="submenu-link">О нас</a>
                 <ul class="submenu">
@@ -24,6 +27,10 @@
                     <li><a href="/logout">Выйти</a></li>
                 <? else: ?>
                     <li><a href="#auth">Вход</a></li>
+                <? endif; ?>
+                <? if (isset($_SESSION['email'])): ?>
+                    <li><a href="/user-account/<?echo $_SESSION['email']?>">Личный кабиент</a></li>
+                <? else: ?>
                 <? endif; ?>
             </ul>
         </nav>

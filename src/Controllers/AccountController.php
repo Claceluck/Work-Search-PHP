@@ -52,4 +52,27 @@ class AccountController extends Controller
         $_SESSION = [];
         header('Location: /');
     }
+
+    // личный кабинет
+    public function getAccountById(Request $request) {
+        $email = $request->params()['email'];
+        $userAccount = $this->accountService->getAccountById($email);
+        $content ='personal-area.php';
+        $data = [
+            'userAccount' => $userAccount
+        ];
+
+        return $this->generateResponse($content, $data);
+    }
+
+    public function getAccountInfoById(Request $request) {
+        $id_info = $request->params()['id_info'];
+        $userInfo = $this->accountService->getAccountInfoById($id_info);
+        $content ='personal-area-info.php';
+        $data = [
+            'userInfo' => $userInfo
+        ];
+
+        return $this->generateResponse($content, $data);
+    }
 }
