@@ -13,9 +13,14 @@
         <h3 class="conteiner">Комментарий</h3>
     </div>
     <div>
-        <p>Тут будут комментарии:
         <?php foreach ($comment as $com):?>
-        <p><? echo $com['comment_text']?></p>
+        <div>
+            <p>Автор:<? echo $_SESSION['email']?></p>
+            <p>Добавленно:<? echo $com['added']?></p>
+            <p><? echo $com['comment_text']?></p>
+            <a type="delete" href="/news/comment/<?echo $com['id_comment']?>">Удалить</a>
+            <hr>
+        </div>
         <?php endforeach;?>
     </div>
   	<form action="/addComment" method="POST">

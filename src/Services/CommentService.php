@@ -34,6 +34,13 @@ class CommentService
         WHERE id_news = :id;';
         $params = ['id' => $id];
 
-        return $this->dbConnection->execute($sql, $params, false);
-	}
+        return $this->dbConnection->execute($sql, $params);
+    }
+    
+    public function deleteComment($id){
+        $sql = 'DELETE FROM comment WHERE id_comment = :id;';
+        $params = ['id' => $id];
+        
+        return $this->dbConnection->executeSql($sql, $params, false);
+    }
 }

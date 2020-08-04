@@ -19,8 +19,16 @@ class CommentController extends Controller
         $comment_data = $request->post();
         $comment_data['comment_text'] =  $comment_data['comment_text'];
         $answer = $this->commentService->addComment($comment_data) ?
-        header('Location: /news/{id}') : 'Ошибка добавления';
+        header('Location: /news') : 'Ошибка добавления';
 
         return $this->ajaxResponse($answer);
+    }
+
+    // метод удаления 
+    public function deleteComment(Request $request){
+        $id = $request->params()['id'];
+        $this->commentService->deleteComment($id);
+
+        return header("Location: /news");
     }
 }
