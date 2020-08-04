@@ -55,3 +55,7 @@ CREATE TABLE IF NOT EXISTS `ws_diplom`.`news` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE IF NOT EXISTS `ws_diplom`.`comentary` (
+`id_comentary` INT(11) NOT NULL AUTO_INCREMENT,
+``
