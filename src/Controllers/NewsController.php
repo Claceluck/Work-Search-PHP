@@ -5,13 +5,16 @@ namespace Philip\Work\Controllers;
 use Philip\Work\Base\Controller;
 use Philip\Work\Base\Request;
 use Philip\Work\Services\NewsService;
+use Philip\Work\Services\CommentService;
 
 class NewsController extends Controller
 {
     private $newsService;
+    private $commentService;
     public function __construct()
     {
         $this->newsService = new NewsService();
+        $this->commentService = new CommentService();
     }
 
     // отображение страницы с блогом
@@ -29,10 +32,12 @@ class NewsController extends Controller
     public function showNewsById(Request $request) {
         $id = $request->params()['id'];
         $news = $this->newsService->getNewsById($id);
+        $comment = $this->commentService->getCommentById($id);
         $content ='news-by-id.php';
         $data = [
             'page_title' => $news['news_header'],
-            'news' => $news
+            'news' => $news,
+            'comment' => $comment,
         ];
 
         return $this->generateResponse($content, $data);

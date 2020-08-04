@@ -32,14 +32,15 @@ class NewsService
         return $this->dbConnection->execute($sql, $params, false);
 	}
 	
-	public function addNews(array $news_data) {
-
-        $news_sql ='INSERT INTO news(news_header, article ) 
-	 				VALUES
-					(:news_header, :article);';
-
-        return $this->dbConnection->executeSql($news_sql, $news_data) ?
-							self::INSERT_SUCCESS : self::INSERT_ERROR;
+	public function addNews(array $news_data) { 
+        $sql = 'SELECT id_user FROM user WHERE email = :email'; 
+        $user_id = $this->dbConnection->execute($sql, ['email'=>$_SESSION['email']], false); 
+        $news_sql ='INSERT INTO news(news_header, article, id_user )  
+      VALUES (:news_header, :article, :id_user);'; 
+        $news_data['id_user'] = $user_id['id_user']; 
+ 
+        return $this->dbConnection->executeSql($news_sql, $news_data) ? 
+       self::INSERT_SUCCESS : self::INSERT_ERROR; 
     }
     
     public function getRedactionNewsById($id){

@@ -13,10 +13,14 @@
         <h3 class="conteiner">Комментарий</h3>
     </div>
     <div>
-        <p>Тут будут комментарии: <? echo $news['comment_text']?></p>
+        <p>Тут будут комментарии:
+        <?php foreach ($comment as $com):?>
+        <p><? echo $com['comment_text']?></p>
+        <?php endforeach;?>
     </div>
   	<form action="/addComment" method="POST">
-      	<fieldset> 
+      	<fieldset>
+            <input type="hidden" name="id_news" value="<? echo $news['id_news'] ?>">
 			<textarea name="comment_text" id="comment_text" cols="30" rows="10" placeholder="Введите сюда комментарий"></textarea> 
 		</fieldset> 
 		<div> 

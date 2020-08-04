@@ -17,12 +17,23 @@ class CommentService
         $this->dbConnection = DBConnection::getInstance();
 	}
 
-    public function addComment(array $comment_data) {
-
-        $comment_sql ='INSERT INTO comment(comment_text) 
-                        VALUES (:comment_text);';
-
-        return $this->dbConnection->executeSql($comment_sql, $comment_data) ?
-							self::COMMENT_SUCCESS : self::COMMENT_ERROR;
+    public function addComment(array $comment_data) { 
+        $sql = 'SELECT id_user FROM user WHERE email = :email'; 
+        $user_id = $this->dbConnection->execute($sql, ['email'=>$_SESSION['email']], false); 
+        $comment_data['id_user'] = $user_id['id_user']; 
+ 
+        $comment_sql ='INSERT INTO comment(comment_text, id_news, id_user)  
+                        VALUES (:comment_text, :id_news, :id_user);'; 
+ 
+        return $this->dbConnection->executeSql($comment_sql, $comment_data) ? 
+       self::COMMENT_SUCCESS : self::COMMENT_ERROR; 
     }
+
+    public function getCommentById($id){
+        $sql = 'SELECT * FROM comment
+        WHERE id_news = :id;';
+        $params = ['id' => $id];
+
+        return $this->dbConnection->execute($sql, $params, false);
+	}
 }
