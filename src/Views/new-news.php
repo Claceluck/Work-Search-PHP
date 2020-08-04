@@ -17,4 +17,16 @@
 			<input type="submit" value="Добавить историю"> 
 		</div>
 	</form>
+	<!-- начал делать загрузку изображений -->
+	<div>
+		<fieldset>
+			<form method="post" action="#"  enctype="multipart/form-data">
+				<div class="">
+					<label for="article">Загруить изображение</label>
+					<input type="file" accept="image/*" name="picture">
+				</div>
+				<input type="submit" value="Загрузить">
+			</form>
+		</fieldset>
+	</div>
 </main>
