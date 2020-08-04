@@ -65,5 +65,14 @@ class NewsService
         
         return $this->dbConnection->executeSql($sql, $params, false);
     }
+
+    public function addComment(array $comment_data) {
+
+        $comment_sql ='INSERT INTO comment(article) 
+	 				VALUES
+					(:article);';
+
+        return $this->dbConnection->executeSql($comment_sql, $comment_data) ?
+							self::INSERT_SUCCESS : self::INSERT_ERROR;
+    }
 }
-		

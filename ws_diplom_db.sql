@@ -3,6 +3,10 @@ SHOW TABLES;
 SELECT * FROM `user`;
 SELECT * FROM `user_info`;
 SELECT * FROM `news`;
+SELECT * FROM `comment`;
+
+
+
 
 CREATE TABLE IF NOT EXISTS `ws_diplom`.`user` (
   `id_user` INT NOT NULL AUTO_INCREMENT,
@@ -56,6 +60,24 @@ CREATE TABLE IF NOT EXISTS `ws_diplom`.`news` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `ws_diplom`.`comentary` (
-`id_comentary` INT(11) NOT NULL AUTO_INCREMENT,
-``
+CREATE TABLE IF NOT EXISTS `ws_diplom`.`comment` (
+  `id_comment` INT(11) NOT NULL AUTO_INCREMENT,
+  `added` DATETIME DEFAULT CURRENT_TIMESTAMP, 
+  `comment_text` LONGTEXT NOT NULL,
+  `id_user` INT(11) NULL DEFAULT NULL,
+  `id_news` INT(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`id_comment`),
+  INDEX `fk_comment_news1_idx` (`id_news` ASC),
+  CONSTRAINT `fk_comment_news1`
+    FOREIGN KEY (`id_news`)
+    REFERENCES `ws_diplom`.`news` (`id_news`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+INDEX `fk_comment_user1_idx` (`id_user` ASC),
+CONSTRAINT `fk_comment_user1`
+    FOREIGN KEY (`id_user`)
+    REFERENCES `ws_diplom`.`user` (`id_user`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;

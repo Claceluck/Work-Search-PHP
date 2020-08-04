@@ -10,4 +10,17 @@
             </div>
         </div>
     </div>
+        <h3 class="conteiner">Комментарий</h3>
+    </div>
+    <div>
+        <p>Тут будут комментарии: <? echo $news['comment_text']?></p>
+    </div>
+  	<form action="/addComment" method="POST">
+      	<fieldset> 
+			<textarea name="article" id="" cols="30" rows="10" placeholder="Введите сюда комментарий"></textarea> 
+		</fieldset> 
+		<div> 
+			<input type="submit" value="Добавить коментарий"> 
+		</div>
+	</form>
 </main>
