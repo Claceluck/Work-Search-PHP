@@ -70,7 +70,7 @@
 		"controller": "Philip\\Work\\Controllers\\AccountController::getAccountById",
 		"method": "GET"
 	},
-	"add comment": {
+    "add comment": {
 		"path": "/addComment",
 		"controller": "Philip\\Work\\Controllers\\CommentController::addComment",
 		"method": "POST"

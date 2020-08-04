@@ -17,7 +17,7 @@
     </div>
   	<form action="/addComment" method="POST">
       	<fieldset> 
-			<textarea name="article" id="" cols="30" rows="10" placeholder="Введите сюда комментарий"></textarea> 
+			<textarea name="comment_text" id="comment_text" cols="30" rows="10" placeholder="Введите сюда комментарий"></textarea> 
 		</fieldset> 
 		<div> 
 			<input type="submit" value="Добавить коментарий"> 

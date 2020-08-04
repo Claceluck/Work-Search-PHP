@@ -20,8 +20,7 @@ class CommentService
     public function addComment(array $comment_data) {
 
         $comment_sql ='INSERT INTO comment(comment_text) 
-	 				VALUES
-					(:comment_text);';
+                        VALUES (:comment_text);';
 
         return $this->dbConnection->executeSql($comment_sql, $comment_data) ?
 							self::COMMENT_SUCCESS : self::COMMENT_ERROR;
