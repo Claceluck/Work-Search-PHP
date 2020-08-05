@@ -24,7 +24,6 @@ class AccountController extends Controller
 
     // регитрация
     public function regUser(Request $request){
-        //var_dump($request->post());
         $result = $this->accountService->addUser($request->post());
         $content = 'registration.php';
         $data = [

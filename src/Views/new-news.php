@@ -13,20 +13,12 @@
 			<label for="article">Содержание</label>
 			<textarea name="article" id="" cols="30" rows="10" placeholder="Текст" required></textarea> 
 		</fieldset> 
+		<!-- <div class="anketa">
+			<label for="article">Загруить изображение</label>
+			<input type="file" accept="image/*" name="picture">
+		</div> -->
 		<div> 
 			<input type="submit" value="Добавить историю"> 
 		</div>
 	</form>
-	<!-- начал делать загрузку изображений -->
-	<div>
-		<fieldset>
-			<form method="post" action="/addImage"  enctype="multipart/form-data">
-				<div class="anketa">
-					<label for="article">Загруить изображение</label>
-					<input type="file" accept="image/*" name="picture">
-				</div>
-				<input type="submit" value="Загрузить">
-			</form>
-		</fieldset>
-	</div>
 </main>

@@ -22,10 +22,7 @@ class AccountService
     }
 
     public function addUser(array $reg_data){
-
-        // заносим данные в бд
         $email = $reg_data['email'];
-
         if ($this->getUser($email)) {
         return self::USER_EXISTS;
         };
@@ -120,7 +117,7 @@ class AccountService
     // личный кабинет
     public function getAccountById($email){
         $sql = 'SELECT * FROM user, user_info
-        WHERE email = :email;';
+            WHERE email = :email;';
         $params = ['email' => $email];
 
         return $this->dbConnection->execute($sql, $params, false);

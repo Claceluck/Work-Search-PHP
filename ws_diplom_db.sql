@@ -4,10 +4,7 @@ SELECT * FROM `user`;
 SELECT * FROM `user_info`;
 SELECT * FROM `news`;
 SELECT * FROM `comment`;
-SELECT * FROM `image`;
-DROP TABLE `image`;
-
-
+SELECT * FROM `news_image`;
 
 CREATE TABLE IF NOT EXISTS `ws_diplom`.`user` (
   `id_user` INT NOT NULL AUTO_INCREMENT,

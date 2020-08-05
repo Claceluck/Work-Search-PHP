@@ -62,15 +62,17 @@ class NewsController extends Controller
         return $this->ajaxResponse($answer);
     }
 
-    public function addImage(Request $request){
-        $image_data = $request->post();
-        $image_data['id_news'] =  $image_data['id_news'];
-        $image_data['imgFile'] =  $image_data['imgFile'];
-        $answer = $this->newsService->addImage($image_data);
+    // public function addNews(Request $request){
+        
+    //     $news = $this->newsService->addNews($request->post());
+    //     $content = 'new-news.php';
+    //     $data = [
+    //         'news' => $news
+    //     ];
 
-        return $this->ajaxResponse($answer);
-    }
-
+    //     return $this->generateResponse($content,$data);
+    // }
+  
     // отображение страницы редактирования
     public function showRedactionNewsById(Request $request) {
         $id = $request->params()['id'];
