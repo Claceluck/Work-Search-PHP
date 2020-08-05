@@ -5,6 +5,8 @@ SELECT * FROM `user_info`;
 SELECT * FROM `news`;
 SELECT * FROM `comment`;
 SELECT * FROM `image`;
+DROP TABLE `image`;
+
 
 
 CREATE TABLE IF NOT EXISTS `ws_diplom`.`user` (
@@ -81,10 +83,10 @@ CONSTRAINT `fk_comment_user1`
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `ws_diplom`.`image` (
+CREATE TABLE IF NOT EXISTS `ws_diplom`.`news_image` (
   `id_image` INT(11) NOT NULL AUTO_INCREMENT,
   `id_news` INT(11) NULL DEFAULT NULL,
-  `image` MEDIUMBLOB NOT NULL,
+  `imgFile` MEDIUMBLOB NOT NULL,
   PRIMARY KEY (`id_image`),
   INDEX `fk_image_news1_idx` (`id_news` ASC),
   CONSTRAINT `fk_image_news1`

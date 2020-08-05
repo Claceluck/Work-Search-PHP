@@ -20,8 +20,8 @@
 	<!-- начал делать загрузку изображений -->
 	<div>
 		<fieldset>
-			<form method="post" action="#"  enctype="multipart/form-data">
-				<div class="">
+			<form method="post" action="/addImage"  enctype="multipart/form-data">
+				<div class="anketa">
 					<label for="article">Загруить изображение</label>
 					<input type="file" accept="image/*" name="picture">
 				</div>

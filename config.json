@@ -30,6 +30,11 @@
 		"controller": "Philip\\Work\\Controllers\\NewsController::addNews",
 		"method": "POST"
 	},
+    "add image": {
+		"path": "/addImage",
+		"controller": "Philip\\Work\\Controllers\\NewsController::addImage",
+		"method": "POST"
+	},
 	"redaction news": {
 		"path": "/redactionNews",
 		"controller": "Philip\\Work\\Controllers\\NewsController::redactionNews",
