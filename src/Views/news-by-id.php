@@ -26,7 +26,7 @@
   	<form action="/addComment" method="POST">
       	<fieldset>
             <input type="hidden" name="id_news" value="<? echo $news['id_news'] ?>">
-			<textarea name="comment_text" id="comment_text" cols="30" rows="10" placeholder="Введите сюда комментарий"></textarea> 
+			<textarea name="comment_text" id="comment_text" cols="30" rows="10" placeholder="Введите сюда комментарий" required></textarea> 
 		</fieldset> 
 		<div> 
 			<input type="submit" value="Добавить коментарий"> 

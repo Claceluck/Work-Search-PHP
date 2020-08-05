@@ -7,12 +7,12 @@
 	  	<fieldset>
 			<div class="anketa">
                 <label for="news_header">Название</label>
-				<input type="text" name="news_header" id="article" value="<? echo $news['news_header'] ?>">
+				<input type="text" name="news_header" id="article" value="<? echo $news['news_header'] ?>" required>
 			</div>
 		</fieldset> 
       	<fieldset> 
 			<label for="article">Содержание</label>
-			<textarea name="article" id="article"><? echo $news['article'] ?></textarea> 
+			<textarea name="article" id="article" required><? echo $news['article']?></textarea> 
 		</fieldset> 
 		<div> 
 			<input type="submit" value="Редактировать историю"> 

@@ -6,12 +6,12 @@
 	  	<fieldset> 
 			<div class="anketa">
 				<label for="news_header">Название</label>
-				<input type="text" name="news_header" id="article" placeholder="Название">
+				<input type="text" name="news_header" id="article" placeholder="Название" required>
 			</div>
 		</fieldset> 
       	<fieldset> 
 			<label for="article">Содержание</label>
-			<textarea name="article" id="" cols="30" rows="10" placeholder="Текст"></textarea> 
+			<textarea name="article" id="" cols="30" rows="10" placeholder="Текст" required></textarea> 
 		</fieldset> 
 		<div> 
 			<input type="submit" value="Добавить историю"> 

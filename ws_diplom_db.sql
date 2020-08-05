@@ -6,8 +6,6 @@ SELECT * FROM `news`;
 SELECT * FROM `comment`;
 
 
-
-
 CREATE TABLE IF NOT EXISTS `ws_diplom`.`user` (
   `id_user` INT NOT NULL AUTO_INCREMENT,
   `email` VARCHAR(200) NOT NULL,
