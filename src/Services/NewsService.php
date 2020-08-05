@@ -45,7 +45,6 @@ class NewsService
     } 
 
     // public function addNews(array $news_data){
-
     //     $news_header = $news_data['news_header'];
     //     $article = $news_data['article']; 
     //     $id_user = $news_data['id_user']; 

@@ -63,7 +63,6 @@ class NewsController extends Controller
     }
 
     // public function addNews(Request $request){
-        
     //     $news = $this->newsService->addNews($request->post());
     //     $content = 'new-news.php';
     //     $data = [
