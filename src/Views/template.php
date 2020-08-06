@@ -36,9 +36,7 @@
         </nav>
     </header>
 
-
 <? include_once $content; ?>
-
 
   <!-- Футер -->
       <footer class=" footer flex_row conteiner_footer flex_column_xs ">

@@ -27,7 +27,7 @@ class AccountService
         return self::USER_EXISTS;
         };
 
-        $pwd = $reg_data['password']; // qwerty123
+        $pwd = $reg_data['password'];
         $pwd = password_hash($pwd, PASSWORD_DEFAULT);
 
         $user_sql = 'INSERT INTO user(email, hash) 

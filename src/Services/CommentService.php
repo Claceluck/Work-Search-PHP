@@ -4,7 +4,6 @@ namespace Philip\Work\Services;
 
 use Philip\Work\Base\DBConnection;
 
-
 class CommentService
 {
     const COMMENT_SUCCESS = 'Коментарий успешно добален';

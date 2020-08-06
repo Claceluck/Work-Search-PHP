@@ -81,9 +81,9 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
 CREATE TABLE IF NOT EXISTS `ws_diplom`.`news_image` (
-  `id_image` INT(11) NOT NULL AUTO_INCREMENT,
+  `id_image` VARCHAR(250) NOT NULL,
   `id_news` INT(11) NULL DEFAULT NULL,
-  `imgFile` MEDIUMBLOB NOT NULL,
+  `img_name` MEDIUMBLOB NOT NULL,
   PRIMARY KEY (`id_image`),
   INDEX `fk_image_news1_idx` (`id_news` ASC),
   CONSTRAINT `fk_image_news1`
@@ -93,5 +93,3 @@ CREATE TABLE IF NOT EXISTS `ws_diplom`.`news_image` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
-
-  
