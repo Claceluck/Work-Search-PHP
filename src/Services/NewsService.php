@@ -44,7 +44,6 @@ class NewsService
     // public function addImage(array $image_data) {  
     //     $image_sql ='INSERT INTO news_image(id_news, img_name)  
     //         VALUES (:id_news, :img_name);'; 
-         
     //     return $this->dbConnection->executeSql($image_sql, $image_data) ? 
     //         self::INSERT_SUCCESS : self::INSERT_ERROR; 
     // } 
